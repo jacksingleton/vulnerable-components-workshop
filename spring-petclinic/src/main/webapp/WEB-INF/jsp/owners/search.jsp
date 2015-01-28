@@ -11,7 +11,7 @@
       <th>
         Last Name:
         <c:if test="${ownerNotFound}">
-            <spring:message code="notFound" arguments="${param.lastName}"/>
+            <spring:message htmlEscape="true" code="notFound" arguments="${param.lastName}"/>
         </c:if>
         <br/> 
         <form:input path="lastName" size="30" maxlength="80" />
