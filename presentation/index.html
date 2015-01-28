@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Vulnerable Components Workshop</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+                <style type="text/css">
+                  pre.bigcode { text-align: center; font-size: 1em }
+                  pre.medcode { text-align: center; font-size: 0.7em }
+                  #speaker-controls { font-size: 0.3em }
+                  .present ul li { margin-bottom: 0.5em }
+                </style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+                          <section>
+                            <h1>Vulnerable Components</h1>
+                            <h3>OWASP #9</h3>
+                            <aside class="notes">
+                              <ul>
+                                <li>If you are doing the hands on version, pair up participants</li>
+                                <li>Ask who has experience with Java and Maven</li>
+                                <li>Try to pair inexperienced with experienced</li>
+                              </ul>
+                            </aside>
+                          </section>
+
+                          <section>
+                            <h2>Using Components with Known Vulnerabilities</h2>
+                            <ul>
+                              <li>Prevalence: WIDESPREAD</li>
+                              <li>Detectability: DIFFICULT</li>
+                            </ul>
+                          </section>
+
+                          <section>
+                            <h2>So what do we have to lose?</h2>
+                            <ul>
+                              <li>Confidentiality</li>
+                              <li>Integrity</li>
+                              <li>Availability</li>
+                            </ul>
+                            <aside class="notes">
+                              <ul>
+                                <li>Core app sec terminology</li>
+                                <li>A vulnerability in a component can turn out to be anything, often even remote code execution!</li>
+                              </ul>
+                            </aside>
+                          </section>
+
+                          <section>
+                            <h2>When should I be careful?</h2>
+                            <ul>
+                              <li>Including a new component</li>
+                              <li>Finding a component you didn't know about</li>
+                              <li>Picking up legacy applications</li>
+                            </ul>
+                          </section>
+
+                          <section>
+                            <h2>Demo</h2>
+                            <aside class="notes">
+                            </aside>
+                          </section>
+
+                          <section>
+                            <h2>Secure Code Checklist</h2>
+                            <ul>
+                              <li>Keep components up to date</li>
+                              <li>Know what components and versions your application uses</li>
+                              <li>Evaluate components before including</li>
+                            </ul>
+                            <aside class="notes">
+                            </aside>
+                          </section>
+
+                          <section>
+                            <h2>Vuln Sources</h2>
+                            <ul>
+                              <li>seclists.org</li>
+                              <li>http://cve.mitre.org/</li>
+                              <li>http://web.nvd.nist.gov/</li>
+                              <li>exploit-db.com</li>
+                              <li>project mailing lists</li>
+                            </ul>
+                          </section>
+
+                          <section>
+                            <h2>Demo</h2>
+                            <aside class="notes">
+                              
+
+                          <section>
+                            <h2>Learn more</h2>
+                            <ul>
+                              <li>TODO</li>
+                              <li>http://cve.mitre.org/</li>
+                            </ul>
+                          </section>
+
+                          <section>
+                            <h2>Feedback?</h2>
+                          </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+                                slideNumber: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                                width: "95%",
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
