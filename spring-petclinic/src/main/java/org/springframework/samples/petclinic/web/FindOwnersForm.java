@@ -46,7 +46,6 @@ public class FindOwnersForm {
 
 	@RequestMapping(value = "/owners", method = RequestMethod.GET)
 	public String processSubmit(Owner owner, BindingResult result, Model model) {
-
 		// allow parameterless GET request for /owners to return all records
 		if (owner.getLastName() == null) {
 			owner.setLastName(""); // empty string signifies broadest possible search
@@ -56,7 +55,7 @@ public class FindOwnersForm {
 		Collection<Owner> results = this.clinic.findOwners(owner.getLastName());
 		if (results.size() < 1) {
 			// no owners found
-			result.rejectValue("lastName", "notFound", "not found");
+            model.addAttribute("ownerNotFound", true);
 			return "owners/search";
 		}
 		if (results.size() > 1) {

@@ -1,15 +1,18 @@
 <%@ include file="/WEB-INF/jsp/includes.jsp" %>
 <%@ include file="/WEB-INF/jsp/header.jsp" %>
 
-
 <h2>Find Owners:</h2>
 
 <spring:url value="/owners" var="formUrl"/>
+
 <form:form modelAttribute="owner" action="${fn:escapeXml(formUrl)}" method="get">
   <table>
     <tr>
       <th>
-        Last Name: <form:errors path="*" cssClass="errors"/>
+        Last Name:
+        <c:if test="${ownerNotFound}">
+            <spring:message code="notFound" arguments="${param.lastName}"/>
+        </c:if>
         <br/> 
         <form:input path="lastName" size="30" maxlength="80" />
       </th>
