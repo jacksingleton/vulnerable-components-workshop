@@ -22,6 +22,7 @@
                   pre.medcode { text-align: center; font-size: 0.7em }
                   #speaker-controls { font-size: 0.3em }
                   .present ul li { margin-bottom: 0.5em }
+                  ul.singlespaced li { margin-bottom: 0 }
                 </style>
 
 		<!-- Printing and PDF exports -->
@@ -45,94 +46,74 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
-                          <section>
-                            <h1>Vulnerable Components</h1>
-                            <h3>OWASP #9</h3>
-                            <aside class="notes">
-                              <ul>
-                                <li>If you are doing the hands on version, pair up participants</li>
-                                <li>Ask who has experience with Java and Maven</li>
-                                <li>Try to pair inexperienced with experienced</li>
-                              </ul>
-                            </aside>
-                          </section>
 
-                          <section>
-                            <h2>Using Components with Known Vulnerabilities</h2>
-                            <ul>
-                              <li>Prevalence: WIDESPREAD</li>
-                              <li>Detectability: DIFFICULT</li>
-                            </ul>
-                          </section>
+<section data-markdown data-separator-notes="^Note:">
+# Vulnerable Components
+### OWASP #9
 
-                          <section>
-                            <h2>So what do we have to lose?</h2>
-                            <ul>
-                              <li>Confidentiality</li>
-                              <li>Integrity</li>
-                              <li>Availability</li>
-                            </ul>
-                            <aside class="notes">
-                              <ul>
-                                <li>Core app sec terminology</li>
-                                <li>A vulnerability in a component can turn out to be anything, often even remote code execution!</li>
-                              </ul>
-                            </aside>
-                          </section>
+Note:
+- If you are doing the hands on version, pair up participants
+- Ask who has experience with Java and Maven
+- Try to pair inexperienced with experienced
+</section>
 
-                          <section>
-                            <h2>When should I be careful?</h2>
-                            <ul>
-                              <li>Including a new component</li>
-                              <li>Finding a component you didn't know about</li>
-                              <li>Picking up legacy applications</li>
-                            </ul>
-                          </section>
 
-                          <section>
-                            <h2>Demo</h2>
-                            <aside class="notes">
-                            </aside>
-                          </section>
+<section data-markdown data-separator-notes="^Note:">
+## Using Components with Known Vulnerabilities
 
-                          <section>
-                            <h2>Secure Code Checklist</h2>
-                            <ul>
-                              <li>Keep components up to date</li>
-                              <li>Know what components and versions your application uses</li>
-                              <li>Evaluate components before including</li>
-                            </ul>
-                            <aside class="notes">
-                            </aside>
-                          </section>
+- Prevalence: WIDESPREAD
+- Detectability: DIFFICULT
+</section>
 
-                          <section>
-                            <h2>Vuln Sources</h2>
-                            <ul>
-                              <li>seclists.org</li>
-                              <li>http://cve.mitre.org/</li>
-                              <li>http://web.nvd.nist.gov/</li>
-                              <li>exploit-db.com</li>
-                              <li>project mailing lists</li>
-                            </ul>
-                          </section>
+<section data-markdown data-separator-notes="^Note:">
+## Demo
 
-                          <section>
-                            <h2>Demo</h2>
-                            <aside class="notes">
-                              
+Note:
+Some notes here
+</section>
 
-                          <section>
-                            <h2>Learn more</h2>
-                            <ul>
-                              <li>TODO</li>
-                              <li>http://cve.mitre.org/</li>
-                            </ul>
-                          </section>
 
-                          <section>
-                            <h2>Feedback?</h2>
-                          </section>
+<section data-markdown data-separator-notes="^Note:">
+## So what do we have to lose?
+
+- Confidentiality ✓
+- Integrity ✓
+- Availability ✓
+
+Note:
+- Core app sec terminology
+- A vulnerability in a component can turn out to be anything, often even remote code execution!
+</section>
+
+<section data-markdown data-separator-notes="^Note:">
+## Secure Code Checklist
+
+- Keep components up to date</li>
+- Evaluate components before including</li>
+- Know what components and versions your application uses</li>
+</section>
+
+<section data-markdown data-separator-notes="^Note:">
+## Let's fix it
+
+- git url
+- Vulnerability resources in handout
+- ```spring-petclinic/pom.xml```
+- ```mvn dependency:list```
+</section>
+
+<section data-markdown data-separator-notes="^Note:">
+## Learn more
+
+- OWASP Page: https://www.owasp.org/index.php/Top_10_2013-A9-Using_Components_with_Known_Vulnerabilities
+- CVE Standard: http://cve.mitre.org/
+- Dependency Check: https://www.owasp.org/index.php/OWASP_Dependency_Check
+</section>
+
+<section data-markdown data-separator-notes="^Note:">
+## Feedback?
+</section>
+
 			</div>
 		</div>
 
