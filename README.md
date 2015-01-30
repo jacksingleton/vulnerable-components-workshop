@@ -1,4 +1,4 @@
-# Vulnerable Dependencies Workshop
+# Vulnerable Components Workshop
 
 ## [Getting started as a participant](README-participant.md)
 
