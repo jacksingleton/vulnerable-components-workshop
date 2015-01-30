@@ -24,4 +24,8 @@ public class BaseEntity {
 		return (this.id == null);
 	}
 
+    public boolean isNotSaved() {
+        return isNew();
+    }
+
 }
