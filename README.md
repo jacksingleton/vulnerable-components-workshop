@@ -8,7 +8,6 @@
 Beginner
 
 ## Requirements
-* Basic knowledge of SQL and relational databases
 * Basic knowledge of Java Programming
 
 For hands on sections:
