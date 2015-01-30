@@ -1,50 +1,50 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-		<title>Vulnerable Components Workshop</title>
+    <title>Vulnerable Components Workshop</title>
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
 
-		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-                <style type="text/css">
-                  pre.bigcode { text-align: center; font-size: 1em }
-                  pre.medcode { text-align: center; font-size: 0.7em }
-                  #speaker-controls { font-size: 0.3em }
-                  .present ul li { margin-bottom: 0.5em }
-                  ul.singlespaced li { margin-bottom: 0 }
-                </style>
+    <style type="text/css">
+      pre.bigcode { text-align: center; font-size: 1em }
+      pre.medcode { text-align: center; font-size: 0.7em }
+      #speaker-controls { font-size: 0.3em }
+      .present ul li { margin-bottom: 0.5em }
+      ul.singlespaced li { margin-bottom: 0 }
+    </style>
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-	<body>
+  <body>
 
-		<div class="reveal">
+    <div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
 
 
 <section data-markdown data-separator-notes="^Note:">
@@ -66,16 +66,25 @@ Note:
 </section>
 
 <section data-markdown data-separator-notes="^Note:">
-## Example
+## Vulnerable App
 
-- Rails
+- Browse to ```http://$IP:8080/owners```
+- Try owner '```${1+1}```'
+- What else can you do?
+
+Note:
+- start the application locally
+- ```mvn jetty:run```
 </section>
 
 <section data-markdown data-separator-notes="^Note:">
 ## Demo
 
 Note:
-Some notes here
+- ```mvn jetty:run```
+- browse to ```http://localhost:8080/owners```
+- submit with ${1+1}
+- submit with ${applicationScope}
 </section>
 
 
@@ -99,13 +108,36 @@ Note:
 - Know what components and versions your application uses</li>
 </section>
 
-<section data-markdown data-separator-notes="^Note:">
-## Let's fix it
+<section data-markdown data-separator-notes="^Note:"><script type="text/template">
+## Fix it!
 
-- git url
+```bash
+  git clone https://github.com/jacksingleton/vulnerable-components-workshop.git
+```
+
 - Vulnerability resources in handout
 - ```spring-petclinic/pom.xml```
 - ```mvn dependency:list```
+
+Note:
+*hands on option*
+
+- move around the room and help each pair implement the fix
+</script></section>
+
+<section data-markdown data-separator-notes="^Note:">
+## Let's fix it!
+
+- I will navigate and type
+- You tell me what to do
+- What component do you think is vulnerable?
+- How should I check?
+
+Note:
+*quicker option*
+
+- try to get everyone involved
+- give hints along the way if the group is stumped
 </section>
 
 <section data-markdown data-separator-notes="^Note:">
@@ -114,45 +146,46 @@ Note:
 - OWASP Page: https://www.owasp.org/index.php/Top_10_2013-A9-Using_Components_with_Known_Vulnerabilities
 - CVE Standard: http://cve.mitre.org/
 - Dependency Check: https://www.owasp.org/index.php/OWASP_Dependency_Check
+- Spring EL Injection Disclosure: http://support.springsource.com/security/cve-2011-2730
 </section>
 
 <section data-markdown data-separator-notes="^Note:">
 ## Feedback?
 </section>
 
-			</div>
-		</div>
+      </div>
+    </div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
 
-		<script>
+    <script>
 
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: false,
-				progress: true,
-				history: true,
-				center: true,
-                                slideNumber: true,
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: false,
+        progress: true,
+        history: true,
+        center: true,
+        slideNumber: true,
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-                                width: "95%",
+        width: "95%",
 
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
 
-		</script>
+    </script>
 
-	</body>
+  </body>
 </html>
