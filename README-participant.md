@@ -1,6 +1,6 @@
 ## 0. Prepare for the workshop
 
-The following command should run without errors
+The following commands should run without errors
 
 * `git clone https://github.com/jacksingleton/vulnerable-components-workshop.git`
 * `cd vulnerable-components-workshop/example-app`
