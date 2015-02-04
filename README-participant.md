@@ -2,7 +2,9 @@
 
 The following command should run without errors
 
-* `cd example-app && mvn jetty:run`
+* `git clone https://github.com/jacksingleton/vulnerable-components-workshop.git`
+* `cd vulnerable-components-workshop/example-app`
+* `mvn jetty:run`
 
 ## 1. Run App
 * `cd example-app`
