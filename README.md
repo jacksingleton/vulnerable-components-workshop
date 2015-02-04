@@ -11,7 +11,7 @@ vulnerable components pose to the security of their application. They
 will be familiar with the basic sources of vulnerability disclosures
 and able to find out if any known issues exist for the versions of
 components that they are using. They should know about the basic
-stratagies for preventing vulnerabilities though third party
+strategies for preventing vulnerabilities though third party
 components.
 
 ## Skill Level
