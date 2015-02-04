@@ -14,6 +14,6 @@ The following command should run without errors
 * Submit with `${1+1}`
 * What else can you do?
 
-## 3. 3. 3. Review slides (or become a facilitator!)
+## 3. Review slides (or become a facilitator!)
 * The slides are html/js
 * Open presentation/index.html in a web browser
