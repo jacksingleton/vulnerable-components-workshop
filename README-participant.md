@@ -16,6 +16,15 @@ The following commands should run without errors
 * Submit with `${1+1}`
 * What else can you do?
 
+## Fix it
+* Here are some sources of known vulnerabilities:
+  * http://cve.mitre.org
+  * http://nvd.nist.gov
+  * http://exploit-db.com
+* The libraries are listed in `pom.xml` (which ones might parse expression language?)
+* Find the libary that has a known vulnerability!
+* Upgrade that library to its patched version in `pom.xml`
+
 ## Review slides (or become a facilitator!)
 * The slides are html/js
 * Open presentation/index.html in a web browser
