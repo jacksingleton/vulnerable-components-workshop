@@ -15,6 +15,7 @@ The following commands should run without errors
 * Browse to `http://localhost:8080/owners/search`
 * Submit with `${1+1}`
 * What else can you do?
+* Try `${applicationScope}`
 
 ## Fix it
 * Here are some sources of known vulnerabilities:
