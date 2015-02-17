@@ -10,4 +10,4 @@ If you are on a Mac, try `export JAVA_HOME=$(/usr/libexec/java_home -v1.7)`, the
 
 If this works, you can add the line to your `~/.profile` to use Java7 by default from now on.
 
-  echo 'export JAVA_HOME=$(/usr/libexec/java_home -v1.7)' >> ~/.profile
+    echo 'export JAVA_HOME=$(/usr/libexec/java_home -v1.7)' >> ~/.profile
