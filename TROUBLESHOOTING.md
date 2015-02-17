@@ -8,6 +8,6 @@ You might need to install Java 7, and/or set your JAVA_HOME environment variable
 
 If you are on a Mac, try `export JAVA_HOME=$(/usr/libexec/java_home -v1.7)`, then run `mvn` again.
 
-If this works, you can add the line to your `~/.profile` with `echo 'export
-JAVA_HOME=$(/usr/libexec/java_home -v1.7)' >> ~/.profile` to use Java7 by
-default from now on.
+If this works, you can add the line to your `~/.profile` to use Java7 by default from now on.
+
+  echo 'export JAVA_HOME=$(/usr/libexec/java_home -v1.7)' >> ~/.profile
