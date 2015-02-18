@@ -1,10 +1,19 @@
 # Vulnerable Components Workshop
 
+
 ## [Getting started as a participant](README-participant.md)
 
 ## [Getting started as a facilitator](README-facilitator.md)
 
 ## Value
+
+> Components, such as libraries, frameworks, and other software modules, almost
+> always run with full privileges. If a vulnerable component is exploited, such
+> an attack can facilitate serious data loss or server takeover. Applications
+> using components with known vulnerabilities may undermine application defenses
+> and enable a range of possible attacks and impacts.
+> 
+> \- [OWASP Top 10](https://www.owasp.org/index.php/Top_10_2013-Top_10)
 
 After this workshop participants will be aware of the risk potentially
 vulnerable components pose to the security of their application. They
