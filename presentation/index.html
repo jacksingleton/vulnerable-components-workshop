@@ -67,26 +67,29 @@ Note:
 
 - Prevalence: WIDESPREAD
 - Detectability: DIFFICULT
+
+Note:
+- Classification on OWASP is WIDESPREAD and DIFFICULT
 </section>
 
 <section data-markdown data-separator-notes="^Note:">
 ## Vulnerable App
 
-- Browse to ```http://$IP:8080/owners/search```
-- Try owner '```${1+1}```'
+- Browse to `http://$IP:8080/owners/search`
+- Try owner '`${1+1}`'
 - What else can you do?
 
 Note:
 - start the application locally
-- ```mvn jetty:run```
+- `mvn jetty:run`
 </section>
 
 <section data-markdown data-separator-notes="^Note:">
 ## Demo
 
 Note:
-- ```mvn jetty:run```
-- browse to ```http://localhost:8080/owners```
+- `mvn jetty:run`
+- browse to `http://localhost:8080/owners`
 - submit with ${1+1}
 - submit with ${applicationScope}
 </section>
