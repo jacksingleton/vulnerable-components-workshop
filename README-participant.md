@@ -34,4 +34,4 @@ The following commands should run without errors
 - OWASP Page: https://www.owasp.org/index.php/Top_10_2013-A9-Using_Components_with_Known_Vulnerabilities
 - CVE Standard: http://cve.mitre.org/
 - Dependency Check: https://www.owasp.org/index.php/OWASP_Dependency_Check
-- Spring EL Injection Disclosure: http://support.springsource.com/security/cve-2011-2730
+- [Vulnerable component disclosure from vendor (spoiler!)](http://support.springsource.com/security/cve-2011-2730)
